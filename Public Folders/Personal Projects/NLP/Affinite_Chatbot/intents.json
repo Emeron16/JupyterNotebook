@@ -1,0 +1,233 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "How are you",
+        "Is anyone there?",
+        "Good day",
+        "What's up",
+        "Hi there"
+      ],
+      "responses": [
+        "Hello! Welcome to Affinite, your family connection platform!",
+        "Hi there! I'm here to help you with your family social network.",
+        "Hey! How can I assist you with Affinite today?",
+        "Hello! Ready to connect with your family?",
+        "Hi! What would you like to know about our family platform?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Farewell",
+        "Take care",
+        "Have a good day",
+        "See you soon",
+        "Talk to you later"
+      ],
+      "responses": [
+        "Goodbye! Keep connecting with your family on Affinite!",
+        "See you later! Don't forget to share those family moments.",
+        "Take care! Your family is always here waiting for you.",
+        "Have a wonderful day! Stay connected with Affinite.",
+        "Bye! Come back soon to share more family memories."
+      ]
+    },
+    {
+      "tag": "features",
+      "patterns": [
+        "What features do you have",
+        "What can this app do",
+        "Tell me about the features",
+        "What are the main features",
+        "What can I do with Affinite",
+        "Show me the features",
+        "What's available",
+        "What functionality is there"
+      ],
+      "responses": [
+        "Affinite offers amazing family connection features! We have family tree visualization, social posts, family events, direct messaging, stories, user profiles, family search, notifications, and dark mode support.",
+        "Our platform includes interactive family trees, social media posts, event management with RSVP, private messaging, 24-hour stories, detailed user profiles, family member search, real-time notifications, and customizable themes.",
+        "You can create family trees, share posts and media, organize family events, message family members privately, share ephemeral stories, build detailed profiles, find family members, receive notifications, and enjoy dark/light mode themes.",
+        "Affinite provides relationship management, privacy controls, media management, trivia games, email integration, mobile responsiveness, and real-time updates to keep your family connected!"
+      ]
+    },
+    {
+      "tag": "family_tree",
+      "patterns": [
+        "How do I create a family tree",
+        "Family tree features",
+        "How does the family tree work",
+        "Can I visualize my family",
+        "Family relationships",
+        "How to add family members",
+        "Family tree visualization"
+      ],
+      "responses": [
+        "Our family tree feature lets you create an interactive visualization of your family relationships. You can add family members, define relationships, and see your family connections in a beautiful tree format.",
+        "To create your family tree, go to the Family Tree section and start adding family members. You can specify relationships like parent, child, sibling, spouse, and more. The tree updates in real-time!",
+        "The family tree visualization helps you see your entire family network at a glance. You can add, edit, and manage family relationships easily through our intuitive interface."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "How do I create an event",
+        "Family events",
+        "Event management",
+        "How to organize family gatherings",
+        "RSVP functionality",
+        "Event planning",
+        "Family gatherings"
+      ],
+      "responses": [
+        "You can create family events easily! Go to the Events section, click 'Create Event', add details like date, time, location, and description. Family members can RSVP and you'll get real-time updates.",
+        "Our event management system lets you organize family gatherings, send invitations, track RSVPs, share event photos, and keep everyone informed about upcoming family activities.",
+        "Create memorable family events with our event planner. Add event details, invite family members, manage RSVPs, and share photos and updates from the event."
+      ]
+    },
+    {
+      "tag": "messaging",
+      "patterns": [
+        "How do I message family members",
+        "Direct messaging",
+        "Private messages",
+        "How to chat with family",
+        "Messaging features",
+        "Family communication"
+      ],
+      "responses": [
+        "You can send direct messages to any family member! Go to the Messages section, select a family member, and start a private conversation. Messages are secure and real-time.",
+        "Our messaging system allows private conversations between family members. You can send text, photos, and even create group chats for different family groups.",
+        "Stay connected with family through our direct messaging feature. Send private messages, share photos, and have real-time conversations with your family members."
+      ]
+    },
+    {
+      "tag": "posts",
+      "patterns": [
+        "How do I create a post",
+        "Social posts",
+        "Sharing with family",
+        "How to share photos",
+        "Family updates",
+        "Posting content"
+      ],
+      "responses": [
+        "Creating posts is easy! Go to the Posts section, click 'Create Post', add your text, photos, or videos, and share with your family. You can control who sees your posts with privacy settings.",
+        "Share your family moments through posts! Upload photos, videos, and text updates. Your family can like, comment, and react to your posts to stay connected.",
+        "Our social posting feature lets you share photos, videos, and updates with your family. You can create engaging content and see your family's reactions in real-time."
+      ]
+    },
+    {
+      "tag": "stories",
+      "patterns": [
+        "What are stories",
+        "How do stories work",
+        "24-hour content",
+        "Ephemeral posts",
+        "Story sharing",
+        "Temporary content"
+      ],
+      "responses": [
+        "Stories are 24-hour ephemeral content that disappears after a day! Share quick moments, behind-the-scenes content, or temporary updates with your family. Perfect for sharing daily life moments.",
+        "Our Stories feature lets you share temporary content that lasts 24 hours. It's great for sharing quick updates, daily moments, or fun content that doesn't need to be permanent.",
+        "Stories are perfect for sharing those everyday family moments! Upload photos or videos that will automatically disappear after 24 hours, keeping your family updated with your daily life."
+      ]
+    },
+    {
+      "tag": "profile",
+      "patterns": [
+        "How do I edit my profile",
+        "User profile features",
+        "Profile customization",
+        "Personal information",
+        "Profile settings",
+        "About me section"
+      ],
+      "responses": [
+        "You can customize your profile with detailed information! Add your hobbies, education, work history, accomplishments, favorite foods, and more. Your profile helps family members get to know you better.",
+        "Your profile is your family's window into your life! Add photos, personal information, interests, achievements, and more. You can control what information is visible to different family members.",
+        "Build a comprehensive profile that tells your family story! Include your background, interests, achievements, and personal details. Privacy settings let you control who sees what information."
+      ]
+    },
+    {
+      "tag": "subscription",
+      "patterns": [
+        "What are the subscription plans",
+        "How much does it cost",
+        "Pricing information",
+        "Subscription features",
+        "Premium features",
+        "Payment plans",
+        "Billing information"
+      ],
+      "responses": [
+        "Affinite offers flexible subscription plans to meet your family's needs! We have free and premium tiers with different features. Check our subscription page for current pricing and plan details.",
+        "Our subscription plans are designed to keep families connected affordably. We offer both free and premium options with various features. Visit the subscription section to see what works best for your family.",
+        "We believe family connection should be accessible! Our subscription plans include free features for basic family networking and premium options for advanced features. Check our pricing page for details."
+      ]
+    },
+    {
+      "tag": "privacy",
+      "patterns": [
+        "How do privacy settings work",
+        "Who can see my posts",
+        "Privacy controls",
+        "Data protection",
+        "Information security",
+        "Profile visibility",
+        "Privacy features"
+      ],
+      "responses": [
+        "Your privacy is important to us! You can control who sees your posts, profile information, and activities. Set different privacy levels for different family members and content types.",
+        "We provide granular privacy controls so you can share what you want with whom you want. Control profile visibility, post sharing, and information access for each family member individually.",
+        "Privacy is built into every feature! You can customize who sees your content, control profile visibility, and manage information sharing with detailed privacy settings for maximum family safety."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "I need help",
+        "How do I get started",
+        "I'm confused",
+        "Can you help me",
+        "I don't understand",
+        "Support needed",
+        "Tutorial",
+        "Getting started"
+      ],
+      "responses": [
+        "I'm here to help! You can start by creating your profile, adding family members, and exploring our features. Check out our 'How It Works' section for step-by-step guides.",
+        "No worries! Getting started is easy. Begin by setting up your profile, then invite family members to join. Our platform is designed to be intuitive and family-friendly.",
+        "Let me help you get started! First, complete your profile, then start connecting with family members. You can explore features like family tree, posts, and events at your own pace."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "Appreciate it",
+        "Much appreciated",
+        "Thank you so much",
+        "Thanks a lot"
+      ],
+      "responses": [
+        "You're very welcome! Happy to help you connect with your family on Affinite!",
+        "My pleasure! Enjoy building those family connections!",
+        "You're welcome! Have fun exploring all the ways to stay connected with your family!",
+        "Glad I could help! Welcome to the Affinite family community!"
+      ]
+    }
+  ]
+}

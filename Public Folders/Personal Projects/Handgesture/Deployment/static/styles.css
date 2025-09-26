@@ -1,0 +1,206 @@
+/* Basic reset for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Description Section Styling */
+.description {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+.description ul {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Gesture Gallery Styling */
+.gesture-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+
+.gesture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.gesture img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+.gesture p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* Adjusts space between items */
+    align-items: flex-start; /* Aligns items at the start */
+    margin: 20px; /* Adds some margin around the container */
+}
+
+.upload-section, .webcam-section {
+    flex: 1; /* Ensures both sections take equal space */
+    margin: 10px; /* Adds some space between sections */
+    padding: 20px; /* Adds padding inside each section */
+    border: 1px solid #ccc; /* Optional: border for better visibility */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+form input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form input[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2ecc71;
+}
+
+/* Webcam Section */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #2980b9;
+    text-align: center;
+}
+
+video {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Chart Container */
+.chart-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.chart-container img {
+    max-width: 100%;
+    border: 2px solid #34495e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    form, video {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .gesture-gallery {
+        flex-direction: column;
+    }
+
+    .gesture img

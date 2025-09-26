@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  <title>Hand Gesture Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <h1>Hand Gesture Detection App</h1>
+
+  <div class="description">
+    <p>
+      This application allows you to detect hand gestures through two methods:
+      <ul>
+        <li>Upload an image file of your hand gesture.</li>
+        <li>Use your webcam to capture a live image.</li>
+      </ul>
+      Once an image is uploaded or captured, the system will analyze the image
+       to recognize the gesture. The detected gesture will be displayed
+       on the screen.
+    </p>
+    <p>
+      The model is able to detect 5 different types of hand gestures:
+    </p>
+    
+    <!-- Gesture Examples Section -->
+    <div class="gesture-gallery">
+      <div class="gesture">
+        <img src="https://github.com/Emeron16/UCSD/blob/main/Capstone%20Project/Data/images/mute.jpeg?raw=true" alt="Left Swipe">
+        <p>Mute</p>
+      </div>
+      <div class="gesture">
+        <img src="https://github.com/Emeron16/UCSD/blob/main/Capstone%20Project/Data/images/Ok.jpeg?raw=true" alt="Right Swipe">
+        <p>Ok</p>
+      </div>
+      <div class="gesture">
+        <img src="https://github.com/Emeron16/UCSD/blob/main/Capstone%20Project/Data/images/stop.png?raw=true" alt="Stop Gesture">
+        <p>Stop</p>
+      </div>
+      <div class="gesture">
+        <img src="https://github.com/Emeron16/UCSD/blob/main/Capstone%20Project/Data/images/thumbs%20down.png?raw=true" alt="Thumbs Down">
+        <p>Dislike</p>
+      </div>
+      <div class="gesture">
+        <img src="https://github.com/Emeron16/UCSD/blob/main/Capstone%20Project/Data/images/thumbs%20up.png?raw=true" alt="Thumbs Up">
+        <p>Like</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="upload-section">
+        <h2>Upload an Image</h2>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="file">Select an image to upload:</label><br><br>
+            <input type="file" id="file" name="file" accept="image/*" required><br><br>
+            <input type="submit" value="Upload and Predict">
+        </form>
+    </div>
+    <div class="webcam-section">
+        <h2>Or use your webcam</h2>
+        <video id="video" width="640" height="480" autoplay></video>
+        <button id="snap">Capture Image</button>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    {% if chart_url %}
+      <img src="data:image/png;base64,{{ chart_url }}" alt="Hand Gesture Prediction">
+    {% endif %}
+  </div>
+
+  <script>
+    // Webcam functionality
+    var video = document.getElementById('video');
+    var canvas = document.getElementById('canvas');
+    var snap = document.getElementById('snap');
+    var context = canvas.getContext('2d');
+
+    // Access webcam
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function(stream) {
+        video.srcObject = stream;
+      })
+      .catch(function(err) {
+        console.log("An error occurred: " + err);
+      });
+
+    // Capture the image from webcam
+    snap.addEventListener("click", function() {
+      context.drawImage(video, 0, 0, 640, 480);
+      var imageDataURL = canvas.toDataURL('image/jpeg');
+      
+      // Send the base64 image to the Flask server via AJAX
+      $.ajax({
+        url: '/capture',
+        type: 'POST',
+        headers: {
+          'ngrok-skip-browser-warning': 'true'  // Skip ngrok warning screen
+        },
+        data: { image_base64: imageDataURL },
+        success: function(response) {
+          // Update the chart-container with the prediction result
+          $('.chart-container').html('<img src="data:image/png;base64,' + response.chart_url + '" alt="Prediction Result">');
+          
+          // Scroll to the chart-container after the image is updated
+          $('html, body').animate({
+            scrollTop: $('.chart-container').offset().top
+          }, 1000);  // Smooth scroll to the result over 1 second
+        },
+        error: function(xhr, status, error) {
+          console.log('Error: ' + error);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

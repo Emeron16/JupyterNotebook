@@ -1,0 +1,8 @@
+Flask==3.0.3 # Web framework
+Flask-Cors==5.0.0 # CORS support for Flask 
+flasgger==0.9.7.1 # Swagger support for Flask 
+numpy==1.26.4 # Numerical operations 
+opencv-python==4.10.0.84 # Computer vision 
+matplotlib==3.8.0 # Plotting and visualization 
+tensorflow==2.16.2 # Machine learning framework 
+pyngrok==7.2.0 # Ngrok support for Flask
